@@ -916,7 +916,7 @@ html[dir="rtl"] .footer-accordion.active:after {
     display: block;
     position: relative;
     z-index: 300;
-    width: 16px;
+    width: 22px;
   }
   .show-icons .lang-ancor {
     margin-inline-end: 15px;
@@ -931,7 +931,7 @@ html[dir="rtl"] .footer-accordion.active:after {
   .menu-bars {
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
     color: var(--sec-color);
     transition: all 0.3s ease-in-out;
@@ -957,7 +957,7 @@ html[dir="rtl"] .footer-accordion.active:after {
     opacity: 0;
     visibility: hidden;
     clip-path: circle(10.9% at 16% 16%);
-    background-color: rgba(30, 30, 30, 0.95);
+    background-color: rgba(30, 30, 30, 0.99);
     transition: 0.4s;
     z-index: 200;
     overflow-y: auto;
