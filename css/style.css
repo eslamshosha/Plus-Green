@@ -107,7 +107,7 @@ header {
 }
 .nav-header li a {
   color: var(--main-color);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
@@ -152,7 +152,7 @@ header {
   } */
 .fixed-nav .nav-header figure img {
   /* max-width: 70px; */
-  width: 235px;
+  width: 175px;
   transition: all 0.3s ease-in-out;
 }
 .nav-header figure {
@@ -170,19 +170,6 @@ header {
   justify-content: space-between;
   padding: 0 15px;
 }
-
-.show-icons .lang-ancor {
-  display: flex;
-  align-items: center;
-  color: var(--main-color);
-  font-size: 16px;
-  font-weight: 400;
-  text-transform: capitalize;
-  transition: all 0.3s ease-in-out;
-}
-.show-icons .lang-ancor:hover {
-  color: var(--main-hover);
-}
 .open-bars::after {
   content: "";
   font-family: "line Awesome Free";
@@ -193,7 +180,7 @@ header {
   content: "";
   font-family: "line Awesome Free";
   font-weight: 900;
-  color: var(--main-hover);
+  color: var(--white-color);
 }
 /*                          header section                     */
 /*                            main                           */
@@ -326,11 +313,11 @@ main .main-cont {
     width: 100%;
   }
   main .main-captions {
-    font-size: 38px;
+    font-size: 34px;
     text-align: center;
   }
   .main-captions span {
-    font-size: 30px;
+    font-size: 20px;
   }
   .main-img-cont figure {
     margin: 30px auto 0;
@@ -501,7 +488,11 @@ html[dir="rtl"] .section-title .first-head {
   }
   .services-ancor {
     font-size: 17px;
-    padding: 60px 15px 15px;
+    padding: 30px 15px 15px;
+    height: 200px;
+  }
+  .img-cont-services{
+    margin-bottom: 15px;
   }
   .services-cont {
     grid-template-columns: repeat(2, 1fr);
@@ -906,9 +897,6 @@ html[dir="rtl"] .footer-accordion.active:after {
 /*                    menu in phone size                      */
 
 @media (max-width: 991px) {
-  .nav-header li:last-of-type {
-    display: none;
-  }
   .show-icons {
     display: flex;
   }
@@ -918,12 +906,9 @@ html[dir="rtl"] .footer-accordion.active:after {
     z-index: 300;
     width: 22px;
   }
-  .show-icons .lang-ancor {
-    margin-inline-end: 15px;
-  }
   .fixed-nav .nav-header figure img,
   .nav-header figure img {
-    max-width: 180px;
+    max-width: 175px;
   }
   .nav-header {
     padding: 10px 0;
@@ -957,7 +942,7 @@ html[dir="rtl"] .footer-accordion.active:after {
     opacity: 0;
     visibility: hidden;
     clip-path: circle(10.9% at 16% 16%);
-    background-color: rgba(30, 30, 30, 0.99);
+    background-color: rgba(141, 198, 63, 0.99);
     transition: 0.4s;
     z-index: 200;
     overflow-y: auto;
@@ -1016,7 +1001,10 @@ html[dir="rtl"] .footer-accordion.active:after {
     justify-content: center;
     align-items: center;
     color: #fff;
-    font-size: 24px;
+    font-size: 18px;
+  }
+  .nav-header li a:hover{
+    color: var(--white-color);
   }
   /*                    menu in phone size                      */
 }
@@ -1152,7 +1140,8 @@ html[dir="rtl"] .cats-dispaly li {
   }
   .cats-dispaly li a {
     justify-content: center;
-    font-size: 20px;
+    font-size: 16px;
+    color: var(--white-color);
   }
   .cats-dispaly li {
     border-bottom: none;
@@ -1194,6 +1183,37 @@ html[dir="rtl"] .cats-dispaly li {
   html[dir="rtl"] .chevron-down::after {
     margin-left: 0;
     margin-right: 4px;
+  }
+}
+/*                                 arrow-top                           */
+.arrow-top {
+  position: fixed;
+  bottom: 50px;
+  inset-inline-start: 30px;
+  display: none;
+  z-index: 10;
+  text-decoration: none !important;
+}
+.arrow-top i {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #212021;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.arrow-top i:hover {
+  background-color: var(--main-hover);
+}
+@media (max-width: 767px) {
+  .arrow-top {
+    bottom: 40px;
+    inset-inline-start: 10px;
   }
 }
 
@@ -1256,8 +1276,6 @@ ol.breadcrumb li:not(.active):after {
 }
 .order-section {
   margin: 30px 0 120px;
-}
-.order-cont {
 }
 .order-head h2 {
   max-width: 630px;

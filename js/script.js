@@ -15,7 +15,7 @@ $(document).ready(function () {
       $(".navgition").toggleClass("reset-left");
       $("body").toggleClass("overflow");
       $(".menu-bars .bars").toggleClass("open-bars");
-    $(".menu-bars .bars").toggleClass("close-bars");
+      $(".menu-bars .bars").toggleClass("close-bars");
     });
     $(".nav-head .close-btn").click(function () {
       $(".navgition").removeClass("reset-left");
@@ -24,7 +24,7 @@ $(document).ready(function () {
       $("body").removeClass("overflow");
     });
   }
-  
+
   //fixed nav
   $stickyNav = $(".top-header");
   $(window).on("scroll load", function () {
@@ -65,7 +65,7 @@ $(document).ready(function () {
     $(".cats-dispaly").slideToggle(400);
   });
   $(".top-header .add-chevron").addClass("chevron-down");
-  
+
   //scroll down button to about us section
   $("#scroll-to-about-section").click(function () {
     $("html, body").animate(
@@ -130,14 +130,32 @@ $(document).ready(function () {
       .siblings(".nav-foot")
       .css("padding-top", "0");
   });
+  //////////** fixed arrow to top**//////////
+  $(".arrow-top").click(function () {
+    $("html,body").animate(
+      {
+        scrollTop: 0,
+      },
+      1500
+    );
+  });
+  $(this).scrollTop() >= 500
+    ? $(".arrow-top").fadeIn(300)
+    : $(".arrow-top").fadeOut(300);
+
+  $(window).scroll(function () {
+    $(this).scrollTop() >= 500
+      ? $(".arrow-top").fadeIn(300)
+      : $(".arrow-top").fadeOut(300);
+  });
   //file input
-  $(".custom-file-upload .upload-change").change(function() {
+  $(".custom-file-upload .upload-change").change(function () {
     let file_val;
-    if($(this).val() == '') {
-        file_val = $('.file-txt').data('title');
+    if ($(this).val() == "") {
+      file_val = $(".file-txt").data("title");
     } else {
-        file_val = $(this).prop('files')[0].name;
+      file_val = $(this).prop("files")[0].name;
     }
-    $('.file-txt').html(file_val); 
+    $(".file-txt").html(file_val);
   });
 });

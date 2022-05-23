@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="css/line-awesome.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
     <link rel="stylesheet" href="css/swiper.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -105,9 +109,6 @@
               </ul>
             </div>
             <div class="show-icons">
-              <a class="lang-ancor" href="index.html">
-                <span>عربي</span>
-              </a>
               <a class="menu-bars fixall" id="menu-id" href="#!">
                 <span class="bars open-bars"></span>
               </a>
@@ -300,7 +301,7 @@
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <a href="#" class="gallery">
+                <a class="gallery"  data-fancybox="gallery" href="images/gallery/01.jpg">
                   <figure class="gallery-figure">
                     <img
                       class="gallery-img"
@@ -315,7 +316,7 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="#" class="gallery">
+                <a class="gallery"  data-fancybox="gallery" href="images/gallery/02.jpg">
                   <figure class="gallery-figure">
                     <img
                       class="gallery-img"
@@ -441,7 +442,7 @@
             </div>
             <div class="col-sm-3 col-xs-12">
               <div class="nav-foot-cont">
-                <h2 class="nav-foot-header foot-header">Social media </h2>
+                <h2 class="nav-foot-header foot-header">Follow us </h2>
                 <ul class="nav-foot list-unstyled nav-icon">
                   <li class="nav-foot-li">
                     <a href="#" class="nav-foot-link">
@@ -478,8 +479,14 @@
       </div>
     </footer>
     <!-- footer section -->
+    <!-- arrow to top -->
+    <a class="arrow-top">
+      <i class="las la-arrow-up"></i>
+    </a>
+    <!-- arrow to top -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
