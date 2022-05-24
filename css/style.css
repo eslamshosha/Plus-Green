@@ -573,6 +573,7 @@ html[dir="rtl"] .section-title .first-head {
   position: relative;
 }
 .gallery {
+  display: flex;
   position: relative;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
