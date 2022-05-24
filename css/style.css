@@ -1237,7 +1237,7 @@ html[dir="rtl"] .cats-dispaly li {
 .breadcrumb-sec .page-head {
   font-size: 30px;
   color: #000000;
-  font-family: 700;
+  font-weight: 700;
   margin-bottom: 15px;
   position: relative;
   padding: 0;
